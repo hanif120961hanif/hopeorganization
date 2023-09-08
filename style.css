@@ -1,0 +1,685 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Poppins:ital,wght@0,100;0,400;1,300;1,400&family=Roboto:wght@100;700&display=swap');
+
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ################################## HTML  ELEMENT  STYLING ################################# */
+
+html{
+    /* font-sixe by default is 16px */
+    /* 16px  is -------- 100 % */
+    /* font-size which I want is 10px  so the formula is--------16/100*10=62.5--------*/
+    font-size: 62.5%;
+    }
+    
+    
+    
+    body{
+        font-family: 'Montserrat', sans-serif;
+        line-height: 1.7;
+    }
+    
+    
+    
+    ul li{
+        list-style: none;
+    }
+    
+    
+    
+    a{
+        font-size: 1.6rem;
+        text-decoration: none;
+    }
+    
+    
+    
+    p , li{
+        font-size: 1.6rem;
+        /* margin 0.5 is liye QK isi p,li ka font-size 1.6rem ha matlb 16px to is ka half yani 50%   8 hota ha to margin or padding em me use krna ha ta k apny fontsize ka half ho */
+        margin-bottom: 0.5em;
+        letter-spacing: 0.15em;
+    }
+    
+    
+    
+    h1 , h2 , h3{
+        margin-bottom: 0.5em;
+        letter-spacing: 0.15em;
+        font-weight: 500;
+    }
+
+/* ############################### UTILITY CLASSES ############################# */
+
+.container{
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.lg-heading{
+    font-size: 3.5rem;
+   }
+   
+   .md-heading{
+   font-size: 2.2rem;
+   }
+
+   .text-multi{
+    background-image: linear-gradient( 110.4deg,  rgba(255,196,254,1) 9.6%, rgba(251,229,123,1) 91% );
+   }
+
+   .text-yello{
+    color: #ff9529;
+   }
+
+
+   .text-navy{
+    color: navy;
+   }
+
+   .text-green{
+    color: green;
+   }
+   
+   .text-red{
+       color: #e63946;
+   }
+   
+   .text-light{
+       color: #f4f4f4;
+   }
+   
+   .text-black{
+       color: #333333;
+   }
+   
+   .text-grey{
+       color: #555555;
+   }
+   
+   .bg-dark{
+       background: #263238;
+   }
+   
+   .btn{
+       display: inline-block;
+       padding: 0.5em 1.5em;
+       font-weight: 500;
+       text-transform: uppercase;
+       margin: 0.5em 0;
+   }
+   
+   .btn-primery {
+     /* background: #f4f4f4; */
+     /* background: lightblue; */
+     background: #e63946;
+     border-radius: 10em;
+   }
+   
+   .btn-primery:hover{
+       /* background: #dddddd; */
+       /* background: #fff; */
+       background: #555555;;
+   }
+   
+   .btn-secondary{
+       border: 2px solid #e63946;
+       padding: 0.5em 0.3em;
+       border-radius: 1.5em;
+       color: #e63946;
+       background: #fff;
+       }
+   
+       .btn-secondary:hover{
+           background: #fcf3f2;
+       }
+
+
+/* #################################### HEADER STYLING ###################################### */
+
+.header{
+    /* is ka naam position-relative is liye diya ha QK hm header page me hi changes kr rehy hain main changing hm ne .header-content me di ha yani wo formula k jis ki wejha se wo center me aya ha */
+    position: relative;
+    height: 95vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)) , url('./img/header\ 1.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.navbar{
+    padding: 1rem;
+}
+
+   .navbar .nav-items{
+    float: right;
+   }
+
+   .navbar .nav-item{
+    display: inline-block;
+    padding: 1rem;
+    text-transform: uppercase;
+}
+
+.navbar a:link,
+.navbar a:visited{
+     color: #f4f4f4;
+}
+
+.navbar a{
+    padding-bottom: 0.3rem;
+}
+
+.navbar a:hover{
+    border-bottom: 1px solid #fff;
+}
+
+.navbar::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+
+.header-content{
+    position: absolute;
+    text-align: center;
+ 
+    top: 50%;
+    left: 50%;
+   transform: translate(-50% , -50%)
+}
+
+.header-content a{
+    margin-top: 10em;
+}
+
+
+/* #################################### MALE PHOTO #################################### */
+#food{
+    padding: 5rem 0 3rem 0;
+}
+
+#food h2{
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 400;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    color: black;
+}
+
+.food-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.food-container img{
+    display: block;
+    width: 100%;
+    margin: auto;
+    max-height: 300px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.img-container{
+    margin: 0 1rem;
+}
+
+
+
+
+/* ################################### 3 box SECTION ###############################3 */
+
+.features{
+    padding: 1rem 0;
+   }
+
+   .box{
+    width: 33.3333333%;
+    float: left;
+    padding: 2rem;
+    /* height: 100%; */
+    text-align: center;
+    font-weight: 500;
+   }
+
+   .box h2{
+    font-weight: 700;
+   }
+
+
+   .box-1, .box-3{
+    color: black;
+}
+
+   .box-2{
+    color: black;
+}
+
+   .box-wrapper::after{
+    content: '';
+    display: block;
+    clear: both;
+   }
+
+    /* ####################################### FOOTER STYLING ##################################### */
+
+    .footer{
+        background:  #263238;
+        color: #f4f4f4;
+        text-align: center;
+        padding: 2rem;
+       }
+    
+       .social-media-links i{
+        margin: 2rem;
+    }
+
+    .social-media-links p{
+        font-size: 1.5rem;
+        word-spacing: 0.5rem;
+    }
+
+    /* ################################## ABOUT PAGE #################################### */
+    .about{
+        padding: 5rem 0;
+       }
+
+       .about-heading::after{
+        content: '';
+        display: block;
+        border: 3px solid #e63946;
+        /*  100% b da sakty hain to complete le gi */
+        width: 100%;
+    }
+
+    .food-container1{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .about h3{
+    text-align: center;
+    margin-top: 3rem;
+}
+    .food-type{
+        width: 100%;
+        margin: 3rem;
+        height: 100px;
+        background: lightcoral;
+
+        transition: background 0.5s ease-in-out;
+    }
+
+    .food-type:hover{
+        background: #e63946;
+        transform: scale(1.3);
+    }
+
+    .img-container1 p{
+        margin: 2rem;
+        font-size: 1.5rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        text-align: center;
+
+    }
+
+
+
+ /* ################################################ BANNER ##################################   */
+
+ .cta-banner{
+    /* background:  radial-gradient( circle 325px at 19.2% 64.8%,  rgba(254,62,101,1) 9.7%, rgba(166,24,146,1) 91.3% ); */
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(245,0,87,1) 0%, rgba(185,1,81,1) 90% );
+     color: #f4f4f4;
+    padding: 1rem;
+    margin-top: 3rem;
+    box-shadow: 5px 5px 10px #00000057;
+}
+
+
+.cta-banner-left{
+    width: 60%;
+    float: left;
+}
+
+.cta-banner-right{
+    width: 40%;
+    float: right;
+    text-align: right;
+   }
+
+.cta-line{
+    font-weight: 700;
+    font-size: 2rem;
+    margin-top: 1.5rem;
+}
+
+.btn-cta{
+    text-align: center;
+    display: inline-block;
+    font-weight: 700;
+    font-size: 3rem;
+    text-transform: uppercase;
+    border: 4px solid white;
+    padding: 0.3em 2.5em;
+    letter-spacing: 0.5rem;
+    color: #f4f4f4;
+}
+
+.cta-banner::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+       
+
+
+/* ############################### contact ########################### */
+
+.food-container2{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.about2 h3{
+text-align: center;
+margin-top: 3rem;
+}
+
+.food-type1{
+    height: 100px;
+    background: lightskyblue;
+
+    transform-origin: center;
+    transition: transform 2s ease-in-out;
+}
+
+.food-type1:hover{
+    transform: rotate(360deg);
+}
+
+.img-container2 p{
+    margin: 2rem;
+    font-size: 2.5rem;
+    /* font-weight: 600; */
+    text-transform: uppercase;
+
+
+}
+
+/* ####################### LOCATION ################# */
+.b h3{
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+.b i{
+    display: inline-block;
+    margin-right: 1rem;
+}
+
+.b h2{
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.x{
+    width: 95%;
+    /* height: 1000px; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.y{
+    /* width: 40%; */
+    height: 100%;
+}
+
+.z{
+    /* width: 40%; */
+    height: 100%;
+}
+
+
+.star-rating{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+
+}
+
+
+/* ############################## MEDIA QUERIES ################################## */
+
+@media (max-width: 500px){
+    html{
+        /* font-size: 8px; */
+        font-size: 50%;
+    }
+
+    .navbar , .nav-items{
+        float: none;
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .features .box{
+        float: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* .features .box-2,
+    .features .box-3{
+        margin-top: 2rem;
+    } */
+
+    .cta-banner-left,
+    .cta-banner-right{
+        float: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    .x{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (min-width: 501px) and (max-width: 768px){
+    html{
+        font-size: 50%;
+    }
+
+    .navbar , .nav-items{
+        float: none;
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+   p{
+    font-size: 1.8rem;
+   }
+
+   .features .box{
+    float: none;
+    width: 100%;
+    text-align: center;
+}
+
+/* .features .box-2,
+.features .box-3{
+    margin-top: 2rem;
+} */
+
+.cta-banner-left,
+.cta-banner-right{
+    float: none;
+    width: 100%;
+    text-align: center;
+}
+
+.x{
+    flex-direction: column;
+    align-items: center;
+
+}
+
+
+.img-container2 p{
+    text-align: center;
+}
+
+
+}
+
+@media(max-width: 767px){
+
+    .navbar , .nav-items{
+        float: none;
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .food-container{
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .food-type3:not(:last-child){
+        margin-bottom: 3rem;
+    }
+
+    .food-type3{
+        box-shadow: 5px 5px 10px 0px #aaa;
+    }
+
+    .img-container{
+        margin: 0;
+    }
+
+    .food-container1{
+        flex-direction: column;
+        align-items: stretch;
+        /* margin: 0; */
+        /* margin-right: 4rem; */
+        margin: auto;
+    }
+
+    .food-type:not(:last-child){
+        margin-bottom: 3rem;
+    }
+
+    .food-type{
+        box-shadow: 5px 5px 10px 0px #aaa;
+       
+    }
+
+    .img-container1{
+        margin: 0;
+       }
+
+       .img-container1 p{
+        margin: 5rem;
+       }
+
+
+    .food-container2{
+        flex-direction: column;
+        align-items: stretch;
+        width: 50%;
+        margin-top: 2rem;
+    }
+
+    .food-type1:not(:last-child){
+        margin-bottom: 3rem;
+    }
+
+    .food-type1{
+        box-shadow: 5px 5px 10px 0px #aaa;
+    }
+
+    .img-container2{
+        margin: 0;
+       
+    }
+
+    .img-container2 p{
+        margin: 3.5rem;
+    }
+}
+
+@media(max-width: 1024px){
+    .food-container1{
+        flex-direction: column;
+        align-items: stretch;
+        /* margin: 0; */
+        margin-right: 4rem;
+        width: 50%;
+    margin: auto;
+}
+
+.food-type:not(:last-child){
+    margin-bottom: 3rem;
+}
+
+.food-type{
+    box-shadow: 5px 5px 10px 0px #aaa;
+   
+}
+
+.img-container1{
+    margin: 0;
+   }
+
+   .img-container1 p{
+    margin-top: 5rem;
+   }
+
+   .img-container2 p{
+    /* text-align: center; */
+    margin-top: 3.5rem;
+   }
+}
+
+
+
+@media(min-width: 769px) and (max-width: 1200px){
+    html{
+        font-size: 56.25%;
+    }
+
+    .cta-banner-left,
+    .cta-banner-right{
+        float: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    
+}
+
+@media(orientation:landscape) and (max-height: 500px){
+    .header{
+        height: 90vmax;
+    }
+}
+
+
